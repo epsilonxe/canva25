@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การสร้างสื่อ/นวัตกรรมการเรียนการสอนเพื่อเพิ่มศักยภาพครูสำหรับพัฒนาความฉลาดรู้ด้านคณิตศาสตร์ของนักเรียนตามสมรรถนะ PISA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Sarabun', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Kanit', sans-serif; }
+        .logoimg {
+            display: block;
+            margin: auto;
+            width: 100%;
+            max-width: 180px;
+        }
+        .math-pattern-bg { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .math-pattern-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 2px, transparent 2px),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 2px, transparent 2px),
+                radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 50px 50px, 30px 30px, 20px 20px;
+        }
+        .math-pattern-bg::after {
+            content: '∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ ∑ ∫ π √ ∞ ÷ × + - = < > ≤ ≥ ∆ θ α β γ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 48px;
+            color: rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 20px;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="math-pattern-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <span class="text-6xl"><img src="./assets/img/logo_c.png" class="logoimg"></span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">การสร้างสื่อ/นวัตกรรมการเรียนการสอนเพื่อเพิ่มศักยภาพครูสำหรับพัฒนาความฉลาดรู้ด้านคณิตศาสตร์ของนักเรียนตามสมรรถนะ PISA</h1>
+            <p class="text-xl md:text-2xl font-light opacity-90">พัฒนาการเรียนการสอนคณิตศาสตร์ด้วยเทคโนโลยีและนวัตกรรม</p>
+            <div class="mt-8 inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-3">
+                <span class="text-lg font-medium">19 กรกฎาคม 2568</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Description -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">ภาพรวมหลักสูตร</h2>
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-8">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        ค้นพบวิธีการปฏิวัติการเรียนการสอนคณิตศาสตร์ด้วยการผสมผสานแนวคิดทางคณิตศาสตร์กับการออกแบบภาพที่น่าสนใจโดยใช้ Canva หลักสูตรที่ครอบคลุมนี้จะเสริมสร้างพลังให้กับนักการศึกษาในการสร้างสื่อการเรียนรู้คณิตศาสตร์ที่น่าสนใจ เพื่อเพิ่มความเข้าใจและการมีส่วนร่วมของนักเรียน
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-2xl">✨</span>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">การเรียนรู้ด้วยภาพ</h4>
+                                <p class="text-gray-600">สร้างอินโฟกราฟิก แผนภูมิ และอนิเมชันที่ทำให้แนวคิดคณิตศาสตร์ที่ซับซ้อนเข้าใจง่าย</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-2xl">🎨</span>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">ทักษะการออกแบบ</h4>
+                                <p class="text-gray-600">เชี่ยวชาญเครื่องมือ Canva เฉพาะสำหรับการสร้างเนื้อหาคณิตศาสตร์เพื่อการศึกษา</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-2xl">📈</span>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">การมีส่วนร่วมของนักเรียน</h4>
+                                <p class="text-gray-600">เพิ่มความฉลาดรู้ทางคณิตศาสตร์ผ่านสื่อการเรียนรู้ที่มีปฏิสัมพันธ์และน่าสนใจ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-2xl">🏆</span>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">ทักษะเชิงปฏิบัติ</h4>
+                                <p class="text-gray-600">ปฏิบัติการและกลยุทธ์การออกแบบที่พร้อมใช้งานได้จริงสำหรับสื่อทางคณิตศาสตร์</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Time Schedule -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">ตารางเวลาการอบรม</h2>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+                        <h3 class="text-xl font-semibold flex items-center">
+                            <span class="text-2xl mr-3">📅</span>
+                            หลักสูตรเข้มข้น 1 วัน (8 ชั่วโมง)
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg">
+                                <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">9:00</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">ต้อนรับและแนะนำ</h4>
+                                    <p class="text-gray-600">ภาพรวมหลักสูตร วัตถุประสงค์ และพื้นฐาน Canva</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-green-50 rounded-lg">
+                                <div class="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">10:00</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">หลักการคณิตศาสตร์เชิงภาพ</h4>
+                                    <p class="text-gray-600">ทำความเข้าใจว่าการออกแบบภาพช่วยเพิ่มความเข้าใจคณิตศาสตร์อย่างไร</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-yellow-50 rounded-lg">
+                                <div class="bg-yellow-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">11:30</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">ปฏิบัติการครั้งที่ 1</h4>
+                                    <p class="text-gray-600">สร้างอินโฟกราฟิกคณิตศาสตร์และสื่อช่วยแก้ปัญหาเชิงภาพ</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-purple-50 rounded-lg">
+                                <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">12:00</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">พักรับประทานอาหารกลางวัน</h4>
+                                    <p class="text-gray-600">พักผ่อนและแลกเปลี่ยนประสบการณ์</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-red-50 rounded-lg">
+                                <div class="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">13:00</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">เทคนิคขั้นสูง</h4>
+                                    <p class="text-gray-600">องค์ประกอบเชิงปฏิสัมพันธ์ แอนิเมชั่น และกลยุทธ์การมีส่วนร่วม</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                                <div class="bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">15:30</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">ปฏิบัติการครั้งที่ 2</h4>
+                                    <p class="text-gray-600">สร้างสื่อการเรียนรู้คณิตศาสตร์ที่สมบูรณ์</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 bg-teal-50 rounded-lg">
+                                <div class="bg-teal-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">16:30</div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">สรุปและถาม-ตอบ</h4>
+                                    <p class="text-gray-600">นำเสนอผลงาน ข้อเสนอแนะ และสรุปหลักสูตร</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Materials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">เอกสารประกอบการอบรม</h2>
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-8 text-center">
+                        <div class="text-6xl mb-6">📄</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">คู่มือการอบรมฉบับสมบูรณ์</h3>
+                        <p class="text-gray-600 mb-6 text-lg">ทุกสิ่งที่คุณต้องการในเอกสาร PDF เล่มเดียว</p>
+                        
+                        <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+                            <div class="grid md:grid-cols-2 gap-6 text-left">
+                                <div class="space-y-3">
+                                    <div class="flex items-center space-x-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <span class="text-gray-700">คู่มือการใช้งานทีละขั้นตอน</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <span class="text-gray-700">ถอดรหัสการประเมินคณิตศาสตร์ PISA</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <span class="text-gray-700">คลังเครื่องมือสร้างสรรค์ใน Canva</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-center space-x-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <span class="text-gray-700">คู่มือแนวทางปฏิบัติที่ดี</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <span class="text-gray-700">ฟีเจอร์สำหรับการทำสื่อคณิตศาสตร์</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <span class="text-green-500 text-xl">✓</span>
+                                        <span class="text-gray-700">ตัวอย่างปฏิบัติการจริง</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg p-4 mb-6">
+                            <p class="text-sm text-gray-700">
+                                <strong>รายละเอียดไฟล์:</strong> 99 หน้า • รูปแบบ PDF • เหมาะสำหรับการใช้งานดิจิทัลและการพิมพ์
+                            </p>
+                        </div>
+                        
+                        <button onclick="downloadPDF()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+                            📥 ดาวน์โหลดเอกสารประกอบการอบรม (PDF)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Download -->
+    <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">ใบประกาศนียบัตร</h2>
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                    <div class="text-6xl mb-4">🏆</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">ใบประกาศนียบัตรการพัฒนาวิชาชีพ</h3>
+                    <p class="text-gray-600 mb-6">เมื่อเสร็จสิ้นหลักสูตรเรียบร้อยแล้ว คุณจะได้รับใบประกาศนียบัตรอย่างเป็นทางการที่รับรองความสำเร็จของคุณในการพัฒนาความฉลาดรู้ทางคณิตศาสตร์ผ่านการออกแบบเชิงภาพ</p>
+                    <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                        <p class="text-sm text-gray-600 mb-4">
+                            <strong>หมายเหตุ:</strong> ใบประกาศนียบัตรจะพร้อมให้ดาวน์โหลดภายใน 24 ชั่วโมงหลังจากเสร็จสิ้นหลักสูตร 
+                            กรุณาตรวจสอบให้แน่ใจว่าคุณได้เข้าร่วมกิจกรรมปฏิบัติการและการประเมินผลครบถ้วนแล้ว
+                        </p>
+                        <div class="mt-4">
+                            <label for="surname" class="block text-sm font-medium text-gray-700 mb-2">กรุณาใส่นามสกุลของคุณ:</label>
+                            <input type="text" id="surname" placeholder="ใส่นามสกุลของคุณ" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors">
+                        </div>
+                    </div>
+                    <button onclick="downloadCertificate()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        📥 ดาวน์โหลดใบประกาศนียบัตร
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Button -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">ความคิดเห็นของคุณมีความสำคัญ</h2>
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
+                    <div class="text-5xl mb-4">💬</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">แบบสำรวจความพึงพอใจต่อหลักสูตร</h3>
+                    <p class="text-gray-600 mb-6">ช่วยเราปรับปรุงหลักสูตรให้ดีขึ้นด้วยการแบ่งปันประสบการณ์ของคุณ ความคิดเห็นของคุณมีค่าและช่วยให้เราสร้างประสบการณ์การเรียนรู้ที่ดีกว่าสำหรับผู้เข้าร่วมในอนาคต</p>
+                    <a href="https://forms.google.com/your-survey-link" target="_blank" class="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg text-decoration-none">
+                        📝 ทำแบบสำรวจความพึงพอใจ
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">ใช้เวลาประมาณ 5 นาทีในการตอบ • เปิดในแท็บใหม่</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="text-xl font-semibold mb-2">การสร้างสื่อ/นวัตกรรมการเรียนการสอนเพื่อเพิ่มศักยภาพครู</h3>
+            <p class="text-gray-400 mb-6">พัฒนาการศึกษาด้วยการออกแบบเชิงภาพ</p>
+            <div class="border-t border-gray-700 pt-6">
+                <p class="text-gray-400 text-sm">&copy; 2024 ภาควิชาคณิตศาสตร์และวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี สงวนลิขสิทธิ์</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function downloadCertificate() {
+            // Get the surname from the input field
+            const surnameInput = document.getElementById('surname');
+            const surname = surnameInput.value.trim();
+            
+            // Check if surname is provided
+            if (!surname) {
+                alert('⚠️ กรุณาใส่นามสกุลของคุณก่อนดาวน์โหลดใบประกาศนียบัตร');
+                surnameInput.focus();
+                return;
+            }
+            
+            // Create file path and name
+            const fileName = `cert_canva_${surname}.pdf`;
+            const filePath = `./static/${fileName}`;
+            
+            // Create a temporary link element for download
+            const downloadLink = document.createElement('a');
+            downloadLink.href = filePath;
+            downloadLink.download = fileName;
+            downloadLink.style.display = 'none';
+            
+            // Add error handling for the download
+            downloadLink.onerror = function() {
+                alert(`❌ ไม่พบใบประกาศนียบัตรสำหรับนามสกุล "${surname}"\n\n` +
+                      `กรุณาตรวจสอบ:\n` +
+                      `• การสะกดนามสกุลให้ถูกต้อง\n` +
+                      `• ใช้ภาษาไทยหรือภาษาอังกฤษตามที่ลงทะเบียน\n` +
+                      `• ไม่มีช่องว่างหรือตัวอักษรพิเศษ\n\n` +
+                      `หากปัญหายังคงอยู่ กรุณาติดต่อผู้จัดการอบรม`);
+                
+                // Focus back to input and select text for easy correction
+                surnameInput.focus();
+                surnameInput.select();
+            };
+            
+            // Try to check if file exists using an image element trick
+            const testImg = new Image();
+            testImg.onload = function() {
+                // If we get here, it means the file exists (though it's not an image)
+                // Proceed with download
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                
+                // Show success message
+                setTimeout(() => {
+                    alert(`🎉 ดาวน์โหลดใบประกาศนียบัตรสำหรับ ${surname} เรียบร้อยแล้ว!\nกรุณาตรวจสอบโฟลเดอร์ดาวน์โหลดของคุณ`);
+                }, 500);
+            };
+            
+            testImg.onerror = function() {
+                // File doesn't exist or can't be accessed
+                // Try direct download anyway (some browsers will handle this)
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                
+                // Wait a moment then check if download failed
+                setTimeout(() => {
+                    // If we reach here and no download happened, show error
+                    const confirmTry = confirm(`ไม่สามารถยืนยันการมีอยู่ของใบประกาศนียบัตรสำหรับ "${surname}"\n\n` +
+                                             `หากการดาวน์โหลดไม่เริ่มต้น อาจเป็นเพราะ:\n` +
+                                             `• การสะกดนามสกุลไม่ถูกต้อง\n` +
+                                             `• ไฟล์ยังไม่พร้อม\n\n` +
+                                             `คุณต้องการลองอีกครั้งหรือไม่?`);
+                    
+                    if (confirmTry) {
+                        surnameInput.focus();
+                        surnameInput.select();
+                    }
+                }, 1000);
+            };
+            
+            // Start the test (this will trigger either onload or onerror)
+            testImg.src = filePath;
+        }
+
+        function downloadPDF() {
+            // Download the course materials PDF from the static folder
+            const a = document.createElement('a');
+            a.href = './static/tutorial.pdf';
+            a.download = 'tutorial.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            // Show success message
+            alert('📄 ดาวน์โหลดเอกสารประกอบการอบรมเรียบร้อยแล้ว! กรุณาตรวจสอบโฟลเดอร์ดาวน์โหลดของคุณสำหรับไฟล์ PDF');
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96138fcb4571f910',t:'MTc1Mjg1ODMwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
