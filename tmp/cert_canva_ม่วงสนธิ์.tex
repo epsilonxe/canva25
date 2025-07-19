@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, landscape, margin=0in]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{fontspec}
+
+\setmainfont{Sukhumvit Set}
+\newcommand{\personname}{นางสาวกุลนันทน์ ม่วงสนธิ์}
+
+\begin{document}
+
+\includepdf[pages=1,
+picturecommand={
+\begin{tikzpicture}[remember picture, overlay]
+\path (current page.center)	++ (0,1.5) node {\bfseries\Huge\personname};
+\end{tikzpicture}
+}
+]{cert_template.pdf}
+
+
+\end{document}
